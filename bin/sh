@@ -1,0 +1,19 @@
+#! /bin/sh
+exeCtr=0
+retVal=0
+num=0
+echo Printing first param
+retVal=$?
+echo $retVal
+exeCtr=$exeCtr+$retVal
+echo $1
+retVal=$?
+exeCtr=$exeCtr+$retVal
+echo Printing second param
+retVal=$?
+exeCtr=$exeCtr+$retVal
+echo $2
+retVal=$?
+exeCtr=$exeCtr+$retVal
+sum=`expr $1 + $2`
+echo $sum > $3
